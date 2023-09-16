@@ -32,3 +32,5 @@ async function connect() {
   }
 }
 connect();
+
+export default app;

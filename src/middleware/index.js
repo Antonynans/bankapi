@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 const config = process.env.JWT_SECRECT_KEY;
 
 const verifyToken = (req, res, next) => {
-  const token = req.cookies.jwt || req.headers["authorization"]?.split(" ");
+  const token = req.headers["authorization"]?.split(" ");
   if (req.headers["authorization"]) {
     try {
       if (token[0] !== "Bearer") {
