@@ -3,6 +3,7 @@ import chaiHttp from "chai-http";
 import app from "./index.js";
 import mongoose from "mongoose";
 
+
 chai.use(chaiHttp);
 const expect = chai.expect;
 
@@ -78,15 +79,7 @@ describe('Transactions API', () => {
   // Add more test cases as needed
 
   after(async () => {
-    // Perform any cleanup steps here, such as deleting test data or closing resources.
-  
-    // Example 1: Deleting test data from the database
-    await deleteTestDataFromDatabase();
-  
-    // Example 2: Closing database connections
-    await closeDatabaseConnection();
-  
-    // Example 3: Resetting application state
-    resetApplicationState();
+   
+    // resetApplicationState();
   });
 });
