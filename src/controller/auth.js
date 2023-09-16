@@ -6,15 +6,6 @@ import bcrypt from "bcryptjs";
 const user = express.Router();
 
 user.post("/signup", async (req, res) => {
-  //   try {
-  //     const { phoneNumber, password } = req.body;
-  //     const user = new User({ phoneNumber, password });
-  //     await user.save();
-  //     res.status(201).json({ message: "User registered successfully" });
-  //   } catch (err) {
-  //     res.status(400).json({ error: err.message });
-  //   }
-  // });
   const { phoneNumber, password } = req.body;
 
   if (password.length < 8) {
